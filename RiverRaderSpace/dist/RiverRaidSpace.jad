@@ -1,0 +1,8 @@
+MIDlet-1: Game, ,space.Game
+MIDlet-Jar-Size: 311709
+MIDlet-Jar-URL: RiverRaidSpace.jar
+MIDlet-Name: RiverRaidSpace
+MIDlet-Vendor: adelannucci game developer
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <asp:Image ID="Image1" runat="server" ImageAlign="Middle" ImageUrl="~/XSB.png" 
+                style="margin-left: 0px; background-color: #000000;" Width="887px" />
+            <div class="clear hideSkiplink" style="background-color: Black">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" Font-Size = 26px>
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="Cursos" Value="Cursos"></asp:MenuItem>
+                        <asp:MenuItem Text="Professores" Value="Professores"></asp:MenuItem>
+                        <asp:MenuItem Text="Departamentos" Value="Departamentos"></asp:MenuItem>
+                        <asp:MenuItem Text="Contato" Value="Contato"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main" 
+            style="background-color: #C0C0C0; color: #000000;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        
+            <div class="footer">
+                <address style="font-size: 19px; color: #00FF00;">
+                    Avenida Graymalkin Lane, n° 1407, na cidade de Salem Center, no Condado de Westchester, Nova York
+                </address>   
+             </div>     
+        <div class="clear">
+            <br />
+        </div>
+    </div> 
+    </form>
+</body>
+</html>

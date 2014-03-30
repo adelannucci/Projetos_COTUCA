@@ -1,0 +1,39 @@
+using System.Data.SqlClient;
+
+
+public class Conexao
+    {
+        public static bool Open(SqlConnection con)
+        {
+            try
+            {
+                con.ConnectionString = ("Data Source=REGULUS;Initial Catalog=BD11248;User ID=bd11248;Password=BD11248");
+                Conexao.Open();
+            }
+            catch (Exception Ex) {return false;}
+	    return true;
+        }
+
+	public static SqlDataReader ExecutaQuery(String Query)
+	{
+		SqlConnection con = new SqlConnection();
+		if (Open(con)) 
+		{
+			SqlCommand cmd = new SqlCommand(Query, con);
+			return cmd.ExecuteReader();
+		}
+		return null;
+	}
+
+	public static int ExecutaNaoQuery(String cm)
+	{
+		SqlConnection con = new SqlConnection();
+		if (Open(con)) 
+		{
+			SqlCommand cmd = new SqlCommand(Query, con);
+			return cmd.Execute ? ();
+		}
+		return null;
+	}
+
+    }

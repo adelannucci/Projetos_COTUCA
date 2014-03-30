@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditCarrinhoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditCarrinhoLabel_idcarrinho}" for="idcarrinho" />
+                    <h:outputLabel id="idcarrinho" value="#{carrinhoController.selected.idcarrinho}" title="#{bundle.EditCarrinhoTitle_idcarrinho}" required="true" requiredMessage="#{bundle.EditCarrinhoRequiredMessage_idcarrinho}"/>
+                    <h:outputLabel value="#{bundle.EditCarrinhoLabel_usuario}" for="usuario" />
+                    <p:selectOneMenu id="usuario" value="#{carrinhoController.selected.usuario}" title="#{bundle.EditCarrinhoTitle_usuario}" >
+                        <f:selectItems value="#{usuarioController.itemsAvailableSelectOne}"/>
+                    </p:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditCarrinhoLabel_produto}" for="produto" />
+                    <p:selectOneMenu id="produto" value="#{carrinhoController.selected.produto}" title="#{bundle.EditCarrinhoTitle_produto}" >
+                        <f:selectItems value="#{produtoController.itemsAvailableSelectOne}"/>
+                    </p:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{carrinhoController.update}" value="#{bundle.EditCarrinhoSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditCarrinhoViewLink}"/>
+                <br />
+                <h:commandLink action="#{carrinhoController.prepareList}" value="#{bundle.EditCarrinhoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditCarrinhoIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

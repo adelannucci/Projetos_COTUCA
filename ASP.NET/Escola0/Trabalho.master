@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Trabalho.master.cs" Inherits="Trabalho" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1 {
+            height: 436px;
+        }
+    </style>
+</head>
+<body>
+            
+    <form id="form1" runat="server">
+            
+  <center> <asp:Table ID="Table1" runat="server" Height="111px" Width="1086px">
+        <asp:TableRow>
+        <asp:TableCell><asp:Image ID="Image1" runat="server" ImageUrl="novo.jpg" Height = 120/></asp:TableCell>
+        <asp:TableCell><center><font size=20>  Escola Xavier para Jovens Superdotados</font></center></asp:TableCell>
+        <asp:TableCell><asp:Image ID="Image2" runat="server" ImageUrl="hogwarts.gif" Height = 120/></asp:TableCell>
+        </asp:TableRow>
+        </asp:Table></center>
+
+
+         <asp:Menu ID="Menu1" runat="server">
+         </asp:Menu><div style="width: 774px; height: 244px; margin-left: 262px;">
+         <br />
+             <br />
+             
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />  
+          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+        
+                 
+        </asp:ContentPlaceHolder>   
+         </div> 
+           
+    &nbsp;</form>
+    
+</body>
+</html>

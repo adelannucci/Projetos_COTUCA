@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateRealizadoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <br />
+            <h:link outcome="/paginas/carrinho/List" value="Show All Carrinho Items"/>
+            <br />
+            <h:link outcome="/paginas/categoria/List" value="Show All Categoria Items"/>
+            <br />
+            <h:link outcome="/paginas/compra/List" value="Show All Compra Items"/>
+            <br />
+            <h:link outcome="/paginas/produto/List" value="Show All Produto Items"/>
+            <br />
+            <h:link outcome="/paginas/usuario/List" value="Show All Usuario Items"/>
+        </ui:define>
+    </ui:composition>
+</html>
+
+
+
+
+

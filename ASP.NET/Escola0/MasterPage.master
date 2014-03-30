@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+       
+        
+        <font color ="green">
+            <br />
+            <asp:Table ID="Table1" runat="server" BorderStyle="Solid" BorderColor="Green" Height="100%" 
+                Width="100%" BackColor="Black">
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell ColumnSpan= '2'>
+                        <asp:Image ID="Image1" runat="server" Width="737px" Height="121px" 
+                        ImageUrl="~/Banner.png" style="margin-left: 0px" />   
+                    </asp:TableHeaderCell>
+                </asp:TableHeaderRow>
+                <asp:TableRow>
+                    <asp:TableCell BorderStyle="Solid" BorderColor="Blue" Width="20%" Height="80%">
+                        <asp:Menu ID="Menu2" runat="server" BackColor ="Black" ForeColor="Green">
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem Text="Cursos" Value="Cursos"></asp:MenuItem>
+                                <asp:MenuItem Text="Professores" Value="Professores"></asp:MenuItem>
+                                <asp:MenuItem Text="Departamentos" Value="Departamentos"></asp:MenuItem>
+                                <asp:MenuItem Text="Contato" Value="Contato"></asp:MenuItem>
+                                <asp:MenuItem Text="Login" Value="Login"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>    
+                    </asp:TableCell>
+                    <asp:TableCell BorderStyle="Solid" BorderColor="Blue" Width="80%" Height="80%">
+                      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                      </asp:ContentPlaceHolder>
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableFooterRow>
+                    <asp:TableHeaderCell ColumnSpan = 2>
+                        <address>
+                            Avenida Graymalkin Lane, n° 1407, na cidade de Salem Center, no Condado de Westchester, Nova York
+                        </address>
+                        
+                    </asp:TableHeaderCell>
+                </asp:TableFooterRow>
+            </asp:Table>
+        </font>
+    </div>
+    </form>
+</body>
+</html>
+

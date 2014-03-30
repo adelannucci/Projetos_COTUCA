@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Meu Sistema</title>
+        <style type="text/css">
+            body {background-color: #eeeeee; font-size: 12px}
+        </style> 
+    </h:head>
+    <h:body>
+        <div align="center">
+            <p:layout style="min-width:1020px;max-width:1020px;min-height:600px">  
+                <p:layoutUnit position="north" size="100">  
+                   <ui:insert name="title">Default Title</ui:insert>
+                   <p:growl id="messages" autoUpdate="true"/>
+                </p:layoutUnit>  
+
+                <p:layoutUnit position="west" size="220">  
+                    <ui:insert name="menu">
+                        <h:form id="menuforme">
+                            <p:menu style="width: 200px">
+                                <p:submenu label="Login">
+                                    <p:menuitem value="Login" icon="ui-icon-key" url="/faces/paginas/usuario/Login.xhtml" />
+                                    <p:menuitem value="Fazer meu cadastro" icon="ui-icon-contact" url="/faces/paginas/usuario/Create.xhtml"/>         
+                                </p:submenu>
+                                <p:submenu label="Cadastro" rendered="true">
+                                    <p:menuitem value="Categorias" icon="ui-icon-contact" url="/faces/paginas/categoria/List.xhtml" /> 
+                                    <p:menuitem value="Produtos" icon="ui-icon-contact" url="/faces/paginas/produto/List.xhtml" />
+                                    <p:menuitem value="Produtos" icon="ui-icon-contact" url="/faces/paginas/produto/Produtos.xhtml" /> 
+                                    <p:menuitem value="Usuario" icon="ui-icon-contact" url="/faces/paginas/usuario/List.xhtml" /> 
+                                    <p:menuitem value="Index" icon="ui-icon-contact" url="/faces/index.xhtml" /> 
+                                </p:submenu>
+                            </p:menu>
+                        </h:form>
+                    </ui:insert>
+                </p:layoutUnit>  
+                <p:layoutUnit position="center">  
+                    <ui:insert name="body" />
+                </p:layoutUnit>  
+            </p:layout>  
+        </div>
+    </h:body>
+</html>
+
