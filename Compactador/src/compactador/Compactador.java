@@ -26,7 +26,7 @@ public class Compactador {
     	Codificador cd = new Codificador(fileName);
     	cd.compactar();
     	
-    	Descodificador des = new Descodificador(fileName);
+    	Decodificador des = new Decodificador(fileName);
     	des.iniciar();
 		
 
