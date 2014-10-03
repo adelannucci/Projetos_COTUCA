@@ -7,7 +7,7 @@ import java.io.RandomAccessFile;
 
 import compactador.Arvore;
 
-public class Descodificador {
+public class Decodificador {
 	
 	private RandomAccessFile compactado;
 	private RandomAccessFile descompactado;
@@ -19,7 +19,7 @@ public class Descodificador {
 	
 	private short qtdDiferentesChars;
 	
-	public Descodificador(String fileName)
+	public Decodificador(String fileName)
 	{
 		String aux[] = fileName.split("\\.");
 		fileName = aux[0];
